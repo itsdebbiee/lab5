@@ -44,3 +44,16 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+function initializePage() {
+	$('.name').click(nameClick)
+}
+
+function nameClick(e) {
+	//prevent page from reloading
+	e.preventDefault();
+
+	$(this).text(newtext);
+	$(this).anagrammedName(name);
+}
+
